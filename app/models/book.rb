@@ -11,11 +11,18 @@ class Book < ActiveRecord::Base
   
   # Date validations using validates_timeliness gem
   # see https://github.com/adzap/validates_timeliness for documentation
-
-
-
-
-
+  validates_date :proposal_date, :on_or_before => lambda { Date.current },
+                                 :on_or_before_message => 'Date cannot be in the future.'
+  validates_date :contract_date, :on_or_before => lambda { Date.current },
+                                 :on_or_before_message => 'Date cannot be in the future.',
+                                 :after => :proposal_date,
+                                 :after_message => 'Contract Date must be after Proposal Date.',
+                                 :allow_blank => true
+  validates_date :published_date, :on_or_before => lambda { Date.current },
+                                  :on_or_before_message => 'Date cannot be in the future.',
+                                  :after => :contract_date,
+                                  :after_message => 'Published Date must be after Contract Date.',
+                                  :allow_blank => true
 
     
   # Custom validation
