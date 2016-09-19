@@ -22,6 +22,7 @@ class BookTest < ActiveSupport::TestCase
   should_not allow_value("bad").for(:proposal_date)
   should_not allow_value(nil).for(:proposal_date)
   
+  #should allow_value(1.year.ago).for(:contract_date) ; didn't work because unable to validate without proposal date
 
 
   context "With a proper context, " do
