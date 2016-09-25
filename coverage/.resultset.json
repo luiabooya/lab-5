@@ -35,9 +35,9 @@
         null,
         null,
         null,
-        85,
-        66,
-        50,
+        91,
+        71,
+        53,
         null,
         null,
         null,
@@ -57,9 +57,9 @@
         null,
         1,
         1,
-        337,
-        91,
-        9,
+        365,
+        98,
+        10,
         null,
         null,
         null
@@ -74,7 +74,7 @@
         null,
         null,
         1,
-        92,
+        99,
         null
       ],
       "/Users/Luia/Apps/Labs/Lab 5/BookManager_2/app/models/book_author.rb": [
@@ -103,6 +103,6 @@
         null
       ]
     },
-    "timestamp": 1474766905
+    "timestamp": 1474768369
   }
 }

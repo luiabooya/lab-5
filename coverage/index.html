@@ -14,7 +14,7 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-24T21:28:25-04:00">2016-09-24T21:28:25-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-24T21:52:49-04:00">2016-09-24T21:52:49-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         18.71
+         20.02
        </span>
     </span> hits/line)
   </h2>
@@ -117,7 +117,7 @@
         <td>21</td>
         <td>21</td>
         <td>0</td>
-        <td>31.7</td>
+        <td>34.0</td>
       </tr>
       
       <tr>
@@ -137,7 +137,7 @@
         <td>5</td>
         <td>5</td>
         <td>0</td>
-        <td>19.2</td>
+        <td>20.6</td>
       </tr>
       
     </tbody>
@@ -190,7 +190,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         21.1
+         22.59
        </span>
     </span> hits/line)
   </h2>
@@ -232,7 +232,7 @@
         <td>21</td>
         <td>21</td>
         <td>0</td>
-        <td>31.7</td>
+        <td>34.0</td>
       </tr>
       
       <tr>
@@ -252,7 +252,7 @@
         <td>5</td>
         <td>5</td>
         <td>0</td>
-        <td>19.2</td>
+        <td>20.6</td>
       </tr>
       
     </tbody>
@@ -793,20 +793,20 @@
           <code class="ruby">  # see https://github.com/adzap/validates_timeliness for documentation</code>
         </li>
       
-        <li class="covered" data-hits="85" data-linenumber="14">
-          <span class="hits">85</span>
+        <li class="covered" data-hits="91" data-linenumber="14">
+          <span class="hits">91</span>
           
           <code class="ruby">  validates_date :proposal_date, on_or_before: -&gt; { Date.current }</code>
         </li>
       
-        <li class="covered" data-hits="66" data-linenumber="15">
-          <span class="hits">66</span>
+        <li class="covered" data-hits="71" data-linenumber="15">
+          <span class="hits">71</span>
           
           <code class="ruby">  validates_date :contract_date, after: :proposal_date, on_or_before: -&gt; { Date.current }, allow_blank: true</code>
         </li>
       
-        <li class="covered" data-hits="50" data-linenumber="16">
-          <span class="hits">50</span>
+        <li class="covered" data-hits="53" data-linenumber="16">
+          <span class="hits">53</span>
           
           <code class="ruby">  validates_date :published_date, after: :contract_date, on_or_before: -&gt; { Date.current }, allow_blank: true  </code>
         </li>
@@ -925,20 +925,20 @@
           <code class="ruby">  def category_is_active_in_system</code>
         </li>
       
-        <li class="covered" data-hits="337" data-linenumber="36">
-          <span class="hits">337</span>
+        <li class="covered" data-hits="365" data-linenumber="36">
+          <span class="hits">365</span>
           
           <code class="ruby">    active_categories = Category.active.all.map{|c| c.id}</code>
         </li>
       
-        <li class="covered" data-hits="91" data-linenumber="37">
-          <span class="hits">91</span>
+        <li class="covered" data-hits="98" data-linenumber="37">
+          <span class="hits">98</span>
           
           <code class="ruby">    unless active_categories.include?(self.category_id)</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="38">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="10" data-linenumber="38">
+          <span class="hits">10</span>
           
           <code class="ruby">      errors.add(:category, &quot;is not currently active in BookManager&quot;)</code>
         </li>
@@ -1075,8 +1075,8 @@
           <code class="ruby">  scope :alphabetical, -&gt; { order(&#39;name&#39;) }</code>
         </li>
       
-        <li class="covered" data-hits="92" data-linenumber="10">
-          <span class="hits">92</span>
+        <li class="covered" data-hits="99" data-linenumber="10">
+          <span class="hits">99</span>
           
           <code class="ruby">  scope :active, -&gt; { where(active: true) }</code>
         </li>
