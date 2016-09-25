@@ -72,28 +72,28 @@ class BookTest < ActiveSupport::TestCase
     #   - for_category
     
     should "have all the books listed alphabetically by title" do
-      # test code goes here...
       assert_equal ["Agile Testing", "Rails 3 Tutorial", "Ruby for Masters", "The RSpec Book", "The Well-Grounded Rubyist"], Book.by_title.map{|b| b.title}
     end
     
     should "have all the books listed alphabetically by category, then by title" do
-      # test code goes here...
+      assert_equal ["Rails 3 Tutorial", "Ruby for Masters", "The Well-Grounded Rubyist", "Agile Testing", "The RSpec Book"], Book.by_category.map{|b| b.title}
     end
     
     should "have all the published books" do
-      # test code goes here...
+      assert_equal ["Rails 3 Tutorial", "The RSpec Book", "The Well-Grounded Rubyist"], Book.published.by_title.map{|b| b.title}
     end
     
     should "have all the books under contract" do
-      # test code goes here...
+      assert_equal ["Ruby for Masters"], Book.under_contract.by_title.map{|b| b.title}
     end
     
     should "have all the books that are only at proposal stage" do
-      # test code goes here...
+      assert_equal ["Agile Testing"], Book.proposed.by_title.map{|b| b.title}
     end
     
     should "have all the books for a particular category" do
-      # test code goes here...
+      assert_equal ["Rails 3 Tutorial"], Book.for_category(@rails.id).by_title.map{|b| b.title}
+      assert_equal ["Ruby for Masters", "The Well-Grounded Rubyist"], Book.for_category(@ruby.id).by_title.map{|b| b.title}
     end
     
     # TESTING CONTRACT AND PUBLISHED DATES
@@ -101,7 +101,6 @@ class BookTest < ActiveSupport::TestCase
         
     should "allow for a contract date in the past after the proposal date" do
       # take advantage of the fact that the default proposal date is 1 year ago...
-      # test code goes here...
     end
     
     should "allow for contract and published dates to be nil" do
